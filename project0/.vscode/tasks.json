@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build with OpenMP",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Xpreprocessor",
+                "-fopenmp",
+                "-I/opt/homebrew/opt/libomp/include",
+                "-L/opt/homebrew/opt/libomp/lib",
+                "-lomp",
+                "${workspaceFolder}/Project0.cpp",
+                "-o",
+                "${workspaceFolder}/Project0"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
